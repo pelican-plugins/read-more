@@ -1,1 +1,1 @@
-from .read_more_link import *
+from .read_more import *  # NOQA

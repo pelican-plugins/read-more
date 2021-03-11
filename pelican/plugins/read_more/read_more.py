@@ -1,12 +1,8 @@
-# -*- coding: utf-8 -*-
 """
-Read More Link
-===========================
+Read More
+=========
 
-This plugin inserts an inline "read more" or "continue" link into the last html element of the object summary.
-
-For more information, please visit: http://vuongnguyen.com/creating-inline-read-more-link-python-pelican-lxml.html
-
+This plugin inserts an inline "Read More" link into the last HTML element of the summary.
 """
 
 from pelican import signals, contents
@@ -17,12 +13,12 @@ try:
     from lxml.html import fragment_fromstring, fragments_fromstring, tostring
     from lxml.etree import ParserError
 except ImportError:
-    raise Exception("Unable to find lxml. To use READ_MORE_LINK, you need lxml")
+    raise Exception("Unable to find lxml. Read More requires lxml to be installed.")
 
 
 def insert_into_last_element(html, element):
     """
-    function to insert an html element into another html fragment
+    Function to insert an HTML element into another HTML fragment.
     example:
         html = '<p>paragraph1</p><p>paragraph2...</p>'
         element = '<a href="/read-more/">read more</a>'
@@ -43,7 +39,7 @@ def insert_into_last_element(html, element):
 
 def insert_read_more_link(instance):
     """
-    Insert an inline "read more" link into the last element of the summary
+    Insert an inline "Read More" link into the last element of the summary
     :param instance:
     :return:
     """
