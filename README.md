@@ -19,15 +19,22 @@ This plugin can be installed via:
 Settings
 --------
 
-Following are some settings related to this plugin:
+The following settings are available. If not set, the plugin will use default values.
 
-    # Create a summary with the specified length
+The following setting defines the string that is added to the end of the summary, before the “Read More” link:
+
+	SUMMARY_END_SUFFIX = "..."
+
+The following setting defines the summary length before truncating and adding the “Read More” link:
+
     SUMMARY_MAX_LENGTH = 50
 
-    # Define what goes inside the “Read More” link
-    READ_MORE_LINK = "<span>Continue reading…</span>"
+The following setting defines the “Read More” link text:
 
-    # Define the format of the “Read More” link
+    READ_MORE_LINK = '<span>continue</span>'
+
+The following setting defines the format of the “Read More” link:
+
     READ_MORE_LINK_FORMAT = '<a class="read-more" href="/{url}">{text}</a>'
 
 Contributing
