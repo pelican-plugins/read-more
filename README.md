@@ -50,7 +50,7 @@ To start contributing to this plugin, review the [Contributing to Pelican][] doc
 Contributors
 ------------
 
-Contributors include: [Vuong Nguyen](https://www.vuongnguyen.com), Dashie, [Justin Mayer](https://justinmayer.com), Kernc
+Contributors include: [Vuong Nguyen](https://www.vuongnguyen.com), Dashie, [Justin Mayer](https://justinmayer.com), Kernc, [Dominik Wombacher](https://dominik.wombacher.cc)
 
 License
 -------
