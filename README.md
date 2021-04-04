@@ -55,4 +55,4 @@ Contributors include: [Vuong Nguyen](https://www.vuongnguyen.com), Dashie, [Just
 License
 -------
 
-This project is licensed under the AGPL-3.0 license.
+This project is licensed under the AGPL 3.0 license.
