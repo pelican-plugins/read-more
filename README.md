@@ -1,7 +1,7 @@
 Read More: A Plugin for Pelican
 ===============================
 
-[![Build Status](https://img.shields.io/github/workflow/status/pelican-plugins/read-more/build)](https://github.com/pelican-plugins/read-more/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/pelican-plugins/read-more/main.yml?branch=main)](https://github.com/pelican-plugins/read-more/actions)
 [![PyPI Version](https://img.shields.io/pypi/v/pelican-read-more)](https://pypi.org/project/pelican-read-more/)
 ![License](https://img.shields.io/pypi/l/pelican-read-more?color=blue)
 
