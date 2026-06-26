@@ -58,12 +58,16 @@ def insert_read_more_link(instance):
     SUMMARY_MAX_LENGTH = instance.settings.get("SUMMARY_MAX_LENGTH", 50)
     READ_MORE_LINK = instance.settings.get("READ_MORE_LINK", "<span>continue</span>")
     READ_MORE_LINK_FORMAT = instance.settings.get(
-        "READ_MORE_LINK_FORMAT", '<a class="read-more" href="/{url}">{text}</a>'
+        "READ_MORE_LINK_FORMAT", '<a class="read-more" href="{url}">{text}</a>'
     )
+    SITEURL = instance.settings.get("SITEURL", "")
+    RELATIVE_URLS = instance.settings.get("RELATIVE_URLS", False)
 
     logger.debug(f"[read_more] SUMMARY_MAX_LENGTH: {SUMMARY_MAX_LENGTH}")
     logger.debug(f"[read_more] READ_MORE_LINK: {READ_MORE_LINK}")
     logger.debug(f"[read_more] READ_MORE_LINK_FORMAT: {READ_MORE_LINK_FORMAT}")
+    logger.debug(f"[read_more] SITEURL: {SITEURL}")
+    logger.debug(f"[read_more] RELATIVE_URLS: {RELATIVE_URLS}")
 
     if not (SUMMARY_MAX_LENGTH and READ_MORE_LINK and READ_MORE_LINK_FORMAT):
         logger.error("[read_more] Abort: Settings not present")
@@ -81,8 +85,9 @@ def insert_read_more_link(instance):
         return
 
     if summary != instance.content:
+        url = instance.url if RELATIVE_URLS else (SITEURL + "/" + instance.url)
         read_more_link = READ_MORE_LINK_FORMAT.format(
-            url=instance.url, text=READ_MORE_LINK
+            url=url, text=READ_MORE_LINK
         )
         logger.debug(f"[read_more] Format: {read_more_link}")
         logger.debug(f"[read_more] Summary (before inject): {summary}")
