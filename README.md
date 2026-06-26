@@ -7,7 +7,7 @@ Read More: A Plugin for Pelican
 
 This Pelican plugin inserts an inline “Read More” link into the last HTML element of the summary.
 
-For more information regarding why it was created, please visit: https://www.vuongnguyen.com/read-more-python-lxml/
+For more information regarding why it was created, please visit: https://vuongnguyen.com/creating-linline-read-more-link-python-pelican-lxml/
 
 Installation
 ------------
